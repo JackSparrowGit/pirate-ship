@@ -141,7 +141,8 @@
 
     <modules>
         <module>pirate-common</module>
-
+        <module>pirate-eureka</module>
+        <module>pirate-generator</module>
     </modules>
 
     <build>
