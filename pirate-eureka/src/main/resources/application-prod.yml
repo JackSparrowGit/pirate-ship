@@ -1,0 +1,26 @@
+# 服务注册中心 (多节点,集群)
+security:
+  basic:
+    enabled: true # 开启基于Http basic认证
+  user:
+    name: root
+    password: root
+
+eureka:
+  server:
+    eviction-interval-timer-in-ms: 10000   # 续期时间，即扫描失效服务的间隔时间（缺省为60*1000ms）
+  instance:
+    # 注册时使用ip而不是主机名
+    prefer-ip-address: true
+    # 指定此实例的ip
+    ip-address: 10.134.22.39
+  client:
+    service-url:
+      defaultZone: http://root:root@10.134.22.40:8090/eureka/,http://root:root@10.134.22.41:8090/eureka/
+
+# actuator 权限    
+management:
+  security:
+    enabled: false
+
+
