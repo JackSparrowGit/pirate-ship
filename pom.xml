@@ -143,6 +143,7 @@
         <module>pirate-common</module>
         <module>pirate-eureka</module>
         <module>pirate-generator</module>
+        <module>pirate-gateway</module>
     </modules>
 
     <build>
