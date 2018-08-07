@@ -79,7 +79,7 @@ public class MainGenerator {
                         .setTablePrefix(new String[]{"t_"})// 此处可以修改为您的表前缀
                         .setNaming(NamingStrategy.underline_to_camel)// 表名生成策略
                         .setInclude(new String[]{
-                                "t_max",
+                                "t_order",
                         }) // 需要生成的表
                         // .setExclude(new String[]{"test"}) // 排除生成的表
                         // 自定义实体父类
