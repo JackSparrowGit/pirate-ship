@@ -27,5 +27,10 @@
         id, order_code, service_node_id, supplier_id, cust_ids, doc_date, delivery_date, clerk, status, delete_flag,
         remark, create_terminal_source, create_by, update_by, create_time, update_time
     </sql>
+    <select id="getList" resultType="com.sparrow.oms.domain.bean.Order">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM t_order
+    </select>
 
 </mapper>

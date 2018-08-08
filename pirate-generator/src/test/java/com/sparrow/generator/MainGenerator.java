@@ -1,13 +1,12 @@
 package com.sparrow.generator;
 
-import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.converts.MySqlTypeConvert;
 import com.baomidou.mybatisplus.generator.config.po.TableFill;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
-import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.DbColumnType;
+import com.baomidou.mybatisplus.generator.config.rules.DbType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.sparrow.config.GeneratorConfig;
 
@@ -35,7 +34,7 @@ public class MainGenerator {
                 .setBaseResultMap(true)// XML ResultMap
                 .setBaseColumnList(true)// XML columList
                 .setAuthor("Jack")
-                .setDateType(DateType.TIME_PACK)
+//                .setDateType(DateType.TIME_PACK)
 //                .setEntityName()
                 // 自定义文件命名，注意 %s 会自动填充表实体属性！
                 // .setMapperName("%sDao")
@@ -58,11 +57,11 @@ public class MainGenerator {
                                 new MySqlTypeConvert() {
                                     // 自定义数据库表字段类型转换【可选】
                                     @Override
-                                    public DbColumnType processTypeConvert(GlobalConfig globalConfig, String fieldType) {
+                                    public DbColumnType processTypeConvert(String fieldType) {
                                         if (fieldType.toLowerCase().contains("tinyint")) {
                                             return DbColumnType.BOOLEAN;
                                         }
-                                        return super.processTypeConvert(globalConfig, fieldType);
+                                        return super.processTypeConvert(fieldType);
                                     }
                                 }
                         )

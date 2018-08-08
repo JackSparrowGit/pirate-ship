@@ -1,5 +1,46 @@
 server:
   port: 8888
+# eureka服务注册发现
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://127.0.0.1:10000/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+    hostname: ${spring.cloud.client.hostname}
 spring:
   application:
     name: pirate-oms-web
+  datasource:
+    name: oms
+    url: jdbc:mysql://192.168.1.89:3306/db1?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+#    spring.datasource.filters: stat,wall,slf4j
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+
+
+# mybatis plus 性能分析拦截器
+mybatisPlus.performanceInterceptorEnabled: true
+# 日志
+logging:
+  level:
+    com.sparrow: debug
+    com.alibaba: debug
+    org.springframework:  warn

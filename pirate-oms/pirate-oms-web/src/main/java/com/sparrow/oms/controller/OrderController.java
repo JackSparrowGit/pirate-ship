@@ -1,11 +1,12 @@
-package com.sparrow.oms.web.controller;
+package com.sparrow.oms.controller;
 
 import com.github.pagehelper.PageInfo;
 import com.sparrow.common.global.PagingRequest;
 import com.sparrow.common.global.RespEntity;
 import com.sparrow.oms.domain.bean.Order;
-import com.sparrow.oms.web.service.OrderService;
+import com.sparrow.oms.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -62,6 +63,11 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
+    @GetMapping("/ok")
+    @ApiOperation(value = "根据id获取单个Order", notes = "根据id获取单个Order")
+    public ResponseEntity getOK() {
+        return ResponseEntity.ok(orderService.getList());
+    }
 
     @GetMapping("{id}")
     @ApiOperation(value = "根据id获取单个Order", notes = "根据id获取单个Order")

@@ -26,11 +26,10 @@ eureka:
   client:
     service-url:
       defaultZone:  http://127.0.0.1:10000/eureka/
-  # 容器化部署需要这个!!!
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
-    hostname: ${spring.cloud.client.ipAddress}
+    hostname: ${spring.cloud.client.hostname}
 logging:
   level:
     com.sparrow:  debug

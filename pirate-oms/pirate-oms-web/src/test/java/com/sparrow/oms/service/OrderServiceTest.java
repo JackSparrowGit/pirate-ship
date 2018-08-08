@@ -1,4 +1,4 @@
-package com.sparrow.oms.web.service;
+package com.sparrow.oms.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;

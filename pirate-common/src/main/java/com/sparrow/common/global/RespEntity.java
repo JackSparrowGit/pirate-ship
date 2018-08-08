@@ -1,6 +1,7 @@
 package com.sparrow.common.global;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.sparrow.common.util.JsonUtils;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
@@ -40,7 +41,9 @@ public class RespEntity<T> {
      **/
     @ApiModelProperty(value = "响应内容")
     private volatile T responseContent = null;
+
     @ApiModelProperty(value = "图片服务器前缀")
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private volatile String prefix = null;
     /**
      * 服务器当前时间戳

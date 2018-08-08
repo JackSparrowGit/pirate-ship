@@ -1,9 +1,10 @@
-package com.sparrow.oms.mapper;
+package com.sparrow.mapper;
 
-
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.sparrow.oms.domain.bean.Order;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * <p>
@@ -16,4 +17,8 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface OrderMapper extends BaseMapper<Order> {
 
+    /**
+     * @return
+     */
+    List<Order> getList();
 }
