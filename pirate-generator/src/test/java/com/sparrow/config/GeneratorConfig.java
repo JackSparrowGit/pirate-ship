@@ -386,7 +386,7 @@ public class GeneratorConfig {
                     .getXmlName() + ConstVal.XML_SUFFIX ), entityName );
             String serviceFile = String.format( ( pathInfo.get( ConstVal.SERVICE_PATH ) + File.separator + tableInfo
                     .getServiceName() + ConstVal.JAVA_SUFFIX ), entityName );
-            String implFile = String.format( ( pathInfo.get( ConstVal.SERVICE_IMPL_PATH ) + File.separator + tableInfo
+            String implFile = String.format((pathInfo.get(ConstVal.SERVICEIMPL_PATH) + File.separator + tableInfo
                     .getServiceImplName() + ConstVal.JAVA_SUFFIX ), entityName );
             String controllerFile = String.format( ( pathInfo.get( ConstVal.CONTROLLER_PATH ) + File.separator + tableInfo
                     .getControllerName() + ConstVal.JAVA_SUFFIX ), entityName );
@@ -465,7 +465,7 @@ public class GeneratorConfig {
     private VelocityEngine getVelocityEngine () {
         if ( engine == null ) {
             Properties p = new Properties();
-            p.setProperty( ConstVal.VM_LOAD_PATH_KEY, ConstVal.VM_LOAD_PATH_VALUE );
+            p.setProperty(ConstVal.VM_LOADPATH_KEY, ConstVal.VM_LOADPATH_VALUE);
             p.setProperty( Velocity.FILE_RESOURCE_LOADER_PATH, "" );
             p.setProperty( Velocity.ENCODING_DEFAULT, ConstVal.UTF8 );
             p.setProperty( Velocity.INPUT_ENCODING, ConstVal.UTF8 );

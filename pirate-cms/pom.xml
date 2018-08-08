@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sparrow</groupId>
+    <artifactId>pirate-cms</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>pirate-cms</name>
+    <description>Demo project for Spring Cloud CMS</description>
+
+    <parent>
+        <groupId>com.sparrow</groupId>
+        <artifactId>pirate-ship</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+
+    <modules>
+        <module>pirate-cms-bean</module>
+        <module>pirate-cms-repository</module>
+        <module>pirate-cms-service</module>
+        <module>pirate-cms-web</module>
+    </modules>
+
+
+</project>

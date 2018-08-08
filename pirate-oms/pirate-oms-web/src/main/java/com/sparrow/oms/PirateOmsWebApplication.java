@@ -1,4 +1,4 @@
-package com.sparrow;
+package com.sparrow.oms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;

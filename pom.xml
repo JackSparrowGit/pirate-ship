@@ -211,6 +211,21 @@
                 <artifactId>pirate-oms-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>pirate-cms-bean</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>pirate-cms-repository</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>pirate-cms-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!-- ↑Module Properties↑-->
 
 
@@ -235,6 +250,7 @@
         <module>pirate-gateway</module>
         <module>pirate-admin</module>
         <module>pirate-oms</module>
+        <module>pirate-cms</module>
     </modules>
 
     <build>
