@@ -1,10 +1,12 @@
 spring:
   application:
-    name: pirate-cms-web
+    name: pirate-gateway
+
+
 info:
   app:
     name: ${spring.application.name}
-    description: OMS Application
+    description: GATEWAY Application
     version: #project.version#
   project:
     version: #project.version#
