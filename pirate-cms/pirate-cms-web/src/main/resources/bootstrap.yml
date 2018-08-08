@@ -4,7 +4,7 @@ spring:
 info:
   app:
     name: ${spring.application.name}
-    description: OMS Application
+    description: CMS Application
     version: #project.version#
   project:
     version: #project.version#
