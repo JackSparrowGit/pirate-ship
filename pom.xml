@@ -270,9 +270,9 @@
         <module>pirate-eureka</module>
         <module>pirate-generator</module>
         <module>pirate-gateway</module>
-        <module>pirate-admin</module>
         <module>pirate-oms</module>
         <module>pirate-cms</module>
+        <module>pirate-treasure</module>
         <module>pirate-zuul</module>
     </modules>
 
