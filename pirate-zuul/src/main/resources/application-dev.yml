@@ -1,0 +1,21 @@
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.hostname}
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+    metadata-map:
+      user.name: admin
+      user.password: admin
+    health-check-url-path: /actuator/health
+    home-page-url-path: /actuator
+    status-page-url-path: /actuator/info
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://root:root@${EUREKA_HOST:localhost}:${EUREKA_PORT:10000}/eureka/
+
+zuul:
+  prefix: /api
+  host:
+    socket-timeout-millis: 2000
+    connect-timeout-millis: 2000
+  routes:

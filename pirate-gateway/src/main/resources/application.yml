@@ -1,4 +1,4 @@
-spring:
+sspring:
   cloud:
     # spring cloud gateway 路由配置方式
     gateway:

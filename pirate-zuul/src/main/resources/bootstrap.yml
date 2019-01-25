@@ -1,12 +1,12 @@
-# 服务注册中心
 spring:
   application:
-    name: pirate-eureka
+    name: pirate-zuul
+
 
 info:
   app:
     name: ${spring.application.name}
-    description: EUREKA Application
+    description: GATEWAY Application
     version: #project.version#
   project:
     version: #project.version#
